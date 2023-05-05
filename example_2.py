@@ -2,7 +2,7 @@
 from selenium import webdriver
 #importing the Options libary from the chrome options
 from selenium.webdriver.chrome.options import Options
-#the BY keyboard tells specifies what parameter to limit to search to
+#the BY keyboard specifies what parameter to limit to search to
 #E.g. ID, CLASS_NAME, etc.
 from selenium.webdriver.common.by import By
 
