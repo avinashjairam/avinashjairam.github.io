@@ -18,6 +18,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
+import time
 
 #Create a Chrome web driver and setting the options
 chrome_options = Options()
@@ -103,11 +104,19 @@ for keyword in keywords:
         product_ratings_num_list.append(product_ratings_num)
         link_list.append(link)
 
-        print(product_name.text, product_price, product_ratings, product_ratings_num, link)
+        print(product_name.text)
+        print(product_price)
+        print(product_ratings)
+        print(product_ratings_num)
+        print(link)
+        print('\n')
 
     #clearing the search field
     driver.find_element(By.ID, 'twotabsearchtextbox').clear()
 
+    #wait 5 seconds to search again 
+    time.sleep(5)
+    
     # waiting 5 seconds for the page to load
     driver.implicitly_wait(5)
 
